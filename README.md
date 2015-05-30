@@ -3,6 +3,9 @@ Invoker
 
 Invoke PHP callables using associative arrays
 
+[![Build status](https://img.shields.io/travis/PHP-DI/Invoker.svg?style=flat-square)](https://api.travis-ci.org/marcojetson/invoker.svg?branch=master)
+[![Test coverage](https://codeclimate.com/github/marcojetson/invoker/badges/coverage.svg)](https://codeclimate.com/github/marcojetson/invoker/coverage)
+
 Usage
 -----
 
