@@ -19,17 +19,18 @@ class DefaultResolver implements Resolver
      */
     public function getCallable($callable)
     {
+        if (is_string($callable) && strpos($callable, '::') !== false) {
+            list($class, $method) = explode('::', $callable);
+            
+            return [new $class, $method];
+        }
+        
         if (is_callable($callable)) {
             return $callable;
         }
         
         if (method_exists($callable, '__invoke')) {
             return new $callable();
-        }
-        
-        $parts = explode('::', $callable);
-        if (sizeof($parts) === 2) {
-            return [new $parts[0], $parts[1]];
         }
         
         throw new \InvalidArgumentException();

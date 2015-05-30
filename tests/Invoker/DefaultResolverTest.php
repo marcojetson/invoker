@@ -34,7 +34,7 @@ class DefaultResolverTest extends \PHPUnit_Framework_TestCase
     {
         $resolver = new DefaultResolver();
         $callable = $resolver->getCallable('Invoker\DefaultResolverTest::testGetCallableMethod');
-        $this->assertTrue(is_callable($callable));
+        $this->assertEquals([new self(), 'testGetCallableMethod'], $callable);
     }
 
     /**
