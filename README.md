@@ -9,8 +9,6 @@ Usage
 Use _invoke_ providing a callable and the arguments as an associative array
 
 ```php
-<?php
-
 function person($name, $age)
 {
 }
@@ -22,8 +20,6 @@ $invoker->invoke('person', ['age' => 29, 'name' => 'Marco']);
 Supports optional arguments
 
 ```php
-<?php
-
 function person($name, $age = 29)
 {
 }
